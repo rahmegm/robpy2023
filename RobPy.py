@@ -57,7 +57,7 @@ def tamanho_proj_vetores(v1: np.ndarray, v2: np.ndarray) -> float:
     :param v2: vetor (np.ndarray) coluna de 3 elementos
     :return: escalar: tamanho da projeção de v1 sobre v2
     """
-    pass
+    return np.abs(produto_escalar(v1, v2)) / norma_vetor(v2)
 
 
 def proj_vetores(v1: np.ndarray, v2: np.ndarray) -> np.ndarray:
@@ -67,7 +67,7 @@ def proj_vetores(v1: np.ndarray, v2: np.ndarray) -> np.ndarray:
     :param v2: vetor (np.ndarray) coluna de 3 elementos
     :return: vetor (np.ndarray) coluna de 3 elementos com o resultado da projeção
     """
-    pass
+    return (produto_escalar(v1, v2) / produto_escalar(v2, v2)) * v2
 
 
 def ang_vetores(v1: np.ndarray, v2: np.ndarray) -> np.ndarray:
@@ -77,7 +77,7 @@ def ang_vetores(v1: np.ndarray, v2: np.ndarray) -> np.ndarray:
     :param v2: vetor (np.ndarray) coluna de 3 elementos
     :return: escalar: ângulo em radianos
     """
-    pass
+    return np.arccos(produto_escalar(v1, v2) / (norma_vetor(v1) * norma_vetor(v2)))
 
 
 def produto_vetorial(v1: np.ndarray, v2: np.ndarray) -> np.ndarray:
@@ -87,7 +87,12 @@ def produto_vetorial(v1: np.ndarray, v2: np.ndarray) -> np.ndarray:
     :param v2: vetor (np.ndarray) coluna de 3 elementos
     :return: vetor (np.ndarray) coluna de 3 elementos com o resultado de v1 x v2
     """
-    pass
+    checa_vetor3(v1)
+    checa_vetor3(v2)
+    rx = v1[1][0] * v2[2][0] - v1[2][0] * v2[1][0]
+    ry = v1[2][0] * v2[0][0] - v1[0][0] * v2[2][0]
+    rz = v1[0][0] * v2[1][0] - v1[1][0] * v2[0][0]
+    return cria_vetor3([rx, ry, rz])
 
 
 # Parte 2

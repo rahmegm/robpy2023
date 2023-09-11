@@ -13,3 +13,10 @@ print(a.shape)
 print(rp.produto_escalar(a, b))
 
 print(rp.norma_vetor(a))
+
+a_b = rp.proj_vetores(a, b)
+print(a_b)
+print(rp.norma_vetor(a_b))
+print(rp.tamanho_proj_vetores(a, b))
+
+print(rp.produto_vetorial(a, b))
