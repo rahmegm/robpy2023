@@ -5,7 +5,7 @@ import RobPy as rp
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d.axes3d import Axes3D
 
-a = rp.cria_vetor3([1, 2, 3])
+# a = rp.cria_vetor3([1, 2, 3])
 # b = rp.cria_vetor3([4, 5, 6])
 #
 # print(a)
@@ -47,4 +47,12 @@ a = rp.cria_vetor3([1, 2, 3])
 # print()
 # print(rp.matriz_rotacao_z(60))
 
-print(rp.cria_vetor4(a))
+# print(rp.cria_vetor4(a))
+
+# R = rp.matriz_rotacao_x(43*np.pi/180)
+# r = rp.cria_vetor3([2, 3, 1])
+#
+# T = rp.cria_operador4(m_rot_b_a=R, v_o_a=r)
+#
+# print(T)
+# print(np.linalg.inv(T))
