@@ -329,7 +329,7 @@ def distancia_entre_retas(po1: np.ndarray, vs1: np.ndarray, po2: np.ndarray, vs2
     :param angtol: Tolerância de ângulo entre as retas para decidir se são paralelas
     :return: Distância entre as retas (float, positivo ou nulo)
     """
-    if angtol<0:
+    if angtol < 0:
         raise ValueError('O valor de tolerância angular deve ser não negativo')
 
     ang = np.abs(ang_vetores(vs1, vs2))
